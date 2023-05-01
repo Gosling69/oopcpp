@@ -22,7 +22,7 @@ int main()
     std::uniform_int_distribution<> distr(10, 20);
 
     Container<Task *> tasksCont;
-    Container<Task*> toAddCont;
+    Container<Task *> toAddCont;
     Container<std::string> results;
 
     for (int i = 0; i < distr(gen); i++) {
@@ -49,19 +49,19 @@ int main()
         }
     }
 
-    ClearCont<std::string>* clearResults = new ClearCont(&results);
-    ClearCont<Task*>* clearTasks = new ClearCont(&tasksCont);
-    ClearCont<Task*>* clearToAddCont = new ClearCont(&toAddCont);
+    ClearCont<std::string> * clearResults = new ClearCont(&results);
+    ClearCont<Task * > * clearTasks = new ClearCont(&tasksCont);
+    ClearCont<Task * >* clearToAddCont = new ClearCont(&toAddCont);
 
-    GetObjectsInCont* getObjsInCont = new GetObjectsInCont(&tasksCont, "Get Objects in Tasks Container");
+    GetObjectsInCont * getObjsInCont = new GetObjectsInCont(&tasksCont, "Get Objects in Tasks Container");
     getObjsInCont->execute();
     cout << getObjsInCont->toString() << endl << endl;
 
-    GetTasksWithResultInCont* getTasksWithRes = new GetTasksWithResultInCont(&tasksCont, "Get Tasks with Result in Tasks Container");
+    GetTasksWithResultInCont * getTasksWithRes = new GetTasksWithResultInCont(&tasksCont, "Get Tasks with Result in Tasks Container");
     getTasksWithRes->execute();
     cout << getTasksWithRes->toString() << endl << endl;
 
-    GetAllObjs* getAll = new GetAllObjs("GetAll");
+    GetAllObjs * getAll = new GetAllObjs("GetAll");
     getAll->execute();
     cout << getAll->toString() << endl << endl;
 
@@ -77,7 +77,7 @@ int main()
 
     int toAddCntLen = toAddCont.get_length();
     for (int i = 0; i < toAddCntLen; i++) {
-        Task* task = toAddCont.remove_back();
+        Task * task = toAddCont.remove_back();
         delete task;
     }
     
