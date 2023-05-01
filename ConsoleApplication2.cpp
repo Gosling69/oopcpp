@@ -51,7 +51,7 @@ int main()
 
     ClearCont<std::string> * clearResults = new ClearCont(&results);
     ClearCont<Task * > * clearTasks = new ClearCont(&tasksCont);
-    ClearCont<Task * >* clearToAddCont = new ClearCont(&toAddCont);
+    ClearCont<Task * > * clearToAddCont = new ClearCont(&toAddCont);
 
     GetObjectsInCont * getObjsInCont = new GetObjectsInCont(&tasksCont, "Get Objects in Tasks Container");
     getObjsInCont->execute();
