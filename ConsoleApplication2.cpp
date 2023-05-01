@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string> 
 #include <random>
-#include "Tasks.h"
+#include "./Tasks.h"
 
 using std::cout;
 using std::cin;
